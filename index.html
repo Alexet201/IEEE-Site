@@ -154,115 +154,111 @@
             </p>
         </section>
 
-        <!-- QR Cards Grid Section -->
+        <!-- QR Cards Section -->
         <section id="qrs" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                <!-- CARD 1: Registro / Membresía -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
-                    <div>
-                        <!-- Badge Header -->
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-ieee-blue/30 text-ieee-cyan border border-ieee-cyan/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                QR 01
-                            </span>
-                            <i class="fa-solid fa-id-card text-ieee-cyan text-xl"></i>
+            <!-- CARD 1: Centered & wide (QR left, description right) -->
+            <div class="flex justify-center mb-8">
+                <div class="glass-card rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 w-full max-w-5xl">
+                    <div class="flex flex-col md:flex-row items-center gap-6 lg:gap-10">
+
+                        <!-- QR Image Container with Fallback (Left) -->
+                        <div class="w-full md:w-1/2 shrink-0">
+                            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col items-center justify-center relative">
+                                <img 
+                                    src="./qr1.png" 
+                                    alt="QR IEEE PreXtreme Programming Competition" 
+                                    class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                    onerror="handleQrError(this, 'PREXTREME', 'https://docs.google.com/forms/d/e/1FAIpQLSfGpNvlVzJK1QaOtl9dIvl5f2DL0qQqSV8rS6ZjZX9ir2cVfw/viewform')"
+                                />
+                            </div>
                         </div>
 
-                        <h3 class="text-xl font-bold text-white mb-2">Registro y Membresía</h3>
-                        <p class="text-gray-300 text-sm mb-6 leading-relaxed">
-                            Escanea para registrarte en nuestras actividades o unirte como miembro oficial de la rama estudiantil.
-                        </p>
+                        <!-- Description (Right) -->
+                        <div class="w-full md:w-1/2 text-center md:text-left">
+                            <!-- Badge Header -->
+                            <div class="flex items-center justify-end mb-4">
+                                <i class="fa-solid fa-trophy text-ieee-cyan text-xl"></i>
+                            </div>
 
-                        <!-- QR Image Container with Fallback -->
-                        <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[220px]">
-                            <img 
-                                src="./qr1.png" 
-                                alt="QR Registro al Evento" 
-                                class="w-48 h-48 object-contain rounded-lg shadow-md"
-                                onerror="handleQrError(this, 'REGISTRO', 'https://ieee.org')"
-                            />
-                            <span class="text-[10px] text-gray-400 mt-2 font-mono">qr1.png</span>
+                            <h3 class="text-2xl font-bold text-white mb-3">IEEE PreXtreme Programming Competition</h3>
+                            <p class="text-ieee-cyan font-semibold text-sm mb-3">¿Listo para llevar tu lógica al límite?</p>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                                El IEEE Computer Society en colaboración con el Club de Algoritmia CUCEI te invitan a participar en el PreXtreme, el evento perfecto para competir y convivir con la comunidad de programación de nuestro centro universitario.
+                            </p>
+
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGpNvlVzJK1QaOtl9dIvl5f2DL0qQqSV8rS6ZjZX9ir2cVfw/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-6 rounded-xl items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
+                                <span>Abrir Enlace</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
                         </div>
-                    </div>
-
-                    <!-- Actions -->
-                    <div>
-                        <a href="https://www.computer.org/membership/join" target="_blank" rel="noopener noreferrer" class="w-full bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
-                            <span>Abrir Enlace</span>
-                            <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- CARD 2: Redes Sociales -->
+            <!-- CARDS 2 & 3: Fill the remaining space -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- CARD 2: Inscripción -->
                 <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                     <div>
                         <!-- Badge Header -->
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-ieee-blue/30 text-ieee-cyan border border-ieee-cyan/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                QR 02
-                            </span>
-                            <i class="fa-solid fa-users text-ieee-cyan text-xl"></i>
+                        <div class="flex items-center justify-end mb-4">
+                            <i class="fa-solid fa-laptop-code text-ieee-cyan text-xl"></i>
                         </div>
 
-                        <h3 class="text-xl font-bold text-white mb-2">Comunidad & Redes</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">Inscripcion IEEE Computer</h3>
                         <p class="text-gray-300 text-sm mb-6 leading-relaxed">
-                            Síguenos en nuestras redes oficiales y entérate de todas las noticias y eventos del capítulo.
+                            Escanea para inscribirte en el capítulo IEEE Computer Society de la rama estudiantil.
                         </p>
 
                         <!-- QR Image Container with Fallback -->
-                        <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[220px]">
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[320px]">
                             <img 
                                 src="./qr2.png" 
-                                alt="QR Redes Sociales" 
-                                class="w-48 h-48 object-contain rounded-lg shadow-md"
-                                onerror="handleQrError(this, 'REDES SOCIALES', 'https://linkedin.com')"
+                                alt="QR Inscripcion IEEE Computer" 
+                                class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                onerror="handleQrError(this, 'INSCRIPCION', 'https://www-computer-org.translate.goog/membership/join?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true')"
                             />
-                            <span class="text-[10px] text-gray-400 mt-2 font-mono">qr2.png</span>
                         </div>
                     </div>
 
                     <!-- Actions -->
                     <div>
-                        <a href="https://www.linkedin.com/company/ieee-computer-society" target="_blank" rel="noopener noreferrer" class="w-full bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
+                        <a href="https://www-computer-org.translate.goog/membership/join?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true" target="_blank" rel="noopener noreferrer" class="w-full bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
                             <span>Abrir Enlace</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- CARD 3: Recursos y Materiales -->
+                <!-- CARD 3: WhatsApp -->
                 <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
                     <div>
                         <!-- Badge Header -->
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="bg-ieee-blue/30 text-ieee-cyan border border-ieee-cyan/30 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                QR 03
-                            </span>
-                            <i class="fa-solid fa-folder-open text-ieee-cyan text-xl"></i>
+                        <div class="flex items-center justify-end mb-4">
+                            <i class="fa-brands fa-whatsapp text-ieee-cyan text-xl"></i>
                         </div>
 
-                        <h3 class="text-xl font-bold text-white mb-2">Recursos & Materiales</h3>
+                        <h3 class="text-xl font-bold text-white mb-2">WhatsApp IEEE Chat</h3>
                         <p class="text-gray-300 text-sm mb-6 leading-relaxed">
-                            Accede a presentaciones de talleres, repositorios de GitHub, archivos y documentación.
+                            Escanea para unirte al chat oficial de WhatsApp y enterarte de todas las novedades del capítulo.
                         </p>
 
                         <!-- QR Image Container with Fallback -->
-                        <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[220px]">
+                        <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[320px]">
                             <img 
                                 src="./qr3.png" 
-                                alt="QR Recursos y Materiales" 
-                                class="w-48 h-48 object-contain rounded-lg shadow-md"
-                                onerror="handleQrError(this, 'RECURSOS', 'https://github.com')"
+                                alt="QR WhatsApp IEEE Chat" 
+                                class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                onerror="handleQrError(this, 'WHATSAPP', 'https://www.whatsapp.com/channel/0029VbDTRFW1CYoIqUhdEq21')"
                             />
-                            <span class="text-[10px] text-gray-400 mt-2 font-mono">qr3.png</span>
                         </div>
                     </div>
 
                     <!-- Actions -->
                     <div>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-full bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
+                        <a href="https://www.whatsapp.com/channel/0029VbDTRFW1CYoIqUhdEq21" target="_blank" rel="noopener noreferrer" class="w-full bg-ieee-blue hover:bg-blue-600 text-white font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-md shadow-ieee-blue/20">
                             <span>Abrir Enlace</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
