@@ -34,6 +34,11 @@
     </script>
 
     <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0B132B;
@@ -159,7 +164,7 @@
 
             <!-- CARD 1: Centered & wide (QR left, description right) -->
             <div class="flex justify-center mb-8">
-                <div class="glass-card rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 w-full max-w-5xl">
+                <div class="glass-card rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 w-full max-w-5xl min-w-0">
                     <div class="flex flex-col md:flex-row items-center gap-6 lg:gap-10">
 
                         <!-- QR Image Container with Fallback (Left) -->
@@ -168,7 +173,7 @@
                                 <img 
                                     src="./qr1.png" 
                                     alt="QR IEEE PreXtreme Programming Competition" 
-                                    class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                    class="w-full max-w-[12rem] sm:max-w-[16rem] lg:max-w-[20rem] h-auto object-contain rounded-lg shadow-md"
                                     onerror="handleQrError(this, 'PREXTREME', 'https://docs.google.com/forms/d/e/1FAIpQLSfGpNvlVzJK1QaOtl9dIvl5f2DL0qQqSV8rS6ZjZX9ir2cVfw/viewform')"
                                 />
                             </div>
@@ -200,7 +205,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
                 <!-- CARD 2: Inscripción -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 min-w-0">
                     <div>
                         <!-- Badge Header -->
                         <div class="flex items-center justify-end mb-4">
@@ -217,7 +222,7 @@
                             <img 
                                 src="./qr2.png" 
                                 alt="QR Inscripcion IEEE Computer" 
-                                class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                class="w-full max-w-[12rem] sm:max-w-[16rem] lg:max-w-[20rem] h-auto object-contain rounded-lg shadow-md"
                                 onerror="handleQrError(this, 'INSCRIPCION', 'https://www-computer-org.translate.goog/membership/join?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc&_x_tr_hist=true')"
                             />
                         </div>
@@ -233,7 +238,7 @@
                 </div>
 
                 <!-- CARD 3: WhatsApp -->
-                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 min-w-0">
                     <div>
                         <!-- Badge Header -->
                         <div class="flex items-center justify-end mb-4">
@@ -250,7 +255,7 @@
                             <img 
                                 src="./qr3.png" 
                                 alt="QR WhatsApp IEEE Chat" 
-                                class="w-64 h-64 lg:w-80 lg:h-80 object-contain rounded-lg shadow-md"
+                                class="w-full max-w-[12rem] sm:max-w-[16rem] lg:max-w-[20rem] h-auto object-contain rounded-lg shadow-md"
                                 onerror="handleQrError(this, 'WHATSAPP', 'https://www.whatsapp.com/channel/0029VbDTRFW1CYoIqUhdEq21')"
                             />
                         </div>
